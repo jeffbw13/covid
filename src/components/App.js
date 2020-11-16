@@ -5,7 +5,7 @@ import regeneratorRuntime from 'regenerator-runtime';  // for async/await
 import Stats from './Stats';
 import MyChart from './MyChart';
 import MyChartjsDash from './MyChartjsDash';
-import { ThemeProvider } from "@chakra-ui/core";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const App = () => {
 
@@ -15,8 +15,6 @@ const App = () => {
     //  use async / await instead of the promise returned by pet api
     //  i.e. .then not used
     const stats = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
-
-    console.log(stats);
     setStats(stats.data || []);
   }
 
@@ -31,7 +29,7 @@ const App = () => {
   )
 };
 
-const ThemedApp = () => <ThemeProvider> <App /> </ThemeProvider>;
+const ThemedApp = () => <ChakraProvider> <App /> </ChakraProvider>;
 
 ReactDOM.render(<ThemedApp />, document.querySelector('#root'))
 
