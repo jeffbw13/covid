@@ -64,7 +64,7 @@ class MyChartjsDash extends React.Component {
     const feeds = this.formatStats(this.props.stats);
     return (
       <div className="MyChartjsDash">
-        <h1>U.S. CovID Tracker</h1>
+        <h1 style={{fontSize: '1.5rem', fontWeight: '700'}}>U.S. CovID Tracker</h1>
         <Switch
           label={' Show cases: '}
           showWhat={'showCases'}

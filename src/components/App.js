@@ -12,8 +12,6 @@ const App = () => {
   const [ stats, setStats ] = useState([]);
 
   async function getStats() {
-    //  use async / await instead of the promise returned by pet api
-    //  i.e. .then not used
     const stats = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
     setStats(stats.data || []);
   }
@@ -23,7 +21,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ width: '90vw', height: '70vw', margin: 'auto', marginTop: '10px'}}>
       <MyChartjsDash stats={stats} />
     </div>
   )
