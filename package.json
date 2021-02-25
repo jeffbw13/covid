@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Covid data visualizer",
   "main": "server/index.js",
+  "homepage": "/subdir/",
   "scripts": {
     "start": "nodemon server/index.js",
-    "dev-parcel": "parcel src/index.html",
+    "dev:parcel": "parcel src/index.html",
+    "build:parcel": "parcel build src/index.html --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
