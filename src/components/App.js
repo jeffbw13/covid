@@ -30,5 +30,3 @@ const App = () => {
 const ThemedApp = () => <ChakraProvider> <App /> </ChakraProvider>;
 
 ReactDOM.render(<ThemedApp />, document.querySelector('#root'))
-
-//<Stats stats={stats} />

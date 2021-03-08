@@ -34,17 +34,6 @@ class MyChartjsDash extends React.Component {
         }})
       })
     }
-    if (this.state.showDeaths) {
-      data.push({
-        title: 'Daily deaths',
-        color: '#ff0000',
-        data: stats.map((stat) => {
-        return {
-          time: stat.lastModified,
-          value: stat.deathIncrease
-        }})
-      })
-    }
     if (this.state.showHosp) {
       data.push({
         title: 'Current hospitalizations',
@@ -53,6 +42,17 @@ class MyChartjsDash extends React.Component {
         return {
           time: stat.lastModified,
           value: stat.hospitalizedCurrently
+        }})
+      })
+    }
+    if (this.state.showDeaths) {
+      data.push({
+        title: 'Daily deaths',
+        color: '#ff0000',
+        data: stats.map((stat) => {
+        return {
+          time: stat.lastModified,
+          value: stat.deathIncrease
         }})
       })
     }
