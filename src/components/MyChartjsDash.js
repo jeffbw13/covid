@@ -7,7 +7,6 @@ import Switch from './Switch';
 class MyChartjsDash extends React.Component {
   constructor(props) {
     super(props);
-    //  we do 'getData' here because it needs formated data to not error
     this.state = {
       showCases: true,
       showHosp: true,

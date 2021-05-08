@@ -12,7 +12,9 @@ const App = () => {
   const [ stats, setStats ] = useState([]);
 
   async function getStats() {
-    const stats = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
+    //  suddenly blocked by CORS
+    //const stats = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
+    const stats = await axios.get('http://localhost:3000/api/us/daily')
     setStats(stats.data || []);
   }
 
