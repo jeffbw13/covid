@@ -11,16 +11,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@chakra-ui/react": "^1.0.0",
-    "@emotion/core": "^10.1.1",
-    "@emotion/react": "^11.0.0",
-    "@emotion/styled": "^10.0.27",
     "axios": "^0.21.0",
     "body-parser": "*",
-    "chakra-ui": "^0.3.9",
     "chart.js": "^2.9.4",
-    "emotion-theming": "^10.0.27",
     "express": "*",
     "framer-motion": "^2.9.4",
     "react": "^16.14.0",
