@@ -5,7 +5,7 @@ import regeneratorRuntime from 'regenerator-runtime';  // for async/await
 import Stats from './Stats';
 import MyChart from './MyChart';
 import MyChartjsDash from './MyChartjsDash';
-import { ChakraProvider } from "@chakra-ui/react";
+// import { ChakraProvider } from "@chakra-ui/react";
 
 const App = () => {
 
@@ -14,7 +14,7 @@ const App = () => {
   async function getStats() {
     //  suddenly blocked by CORS
     //const stats = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
-    const stats = await axios.get('http://localhost:3000/api/us/daily')
+    const stats = await axios.get('http://localhost:8181/api/us/daily')
     setStats(stats.data || []);
   }
 
@@ -29,6 +29,7 @@ const App = () => {
   )
 };
 
-const ThemedApp = () => <ChakraProvider> <App /> </ChakraProvider>;
+//const ThemedApp = () => <ChakraProvider> <App /> </ChakraProvider>;
 
-ReactDOM.render(<ThemedApp />, document.querySelector('#root'))
+//ReactDOM.render(<ThemedApp />, document.querySelector('#root'))
+ReactDOM.render(<App />, document.querySelector('#root'))
